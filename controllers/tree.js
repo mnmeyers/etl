@@ -18,8 +18,8 @@ function createTree(flatTree) {
     _.each(flatTree, function (node) {
        var path = node.name.split(' > ');
        var childNodeName = path.pop();
-        var nodePaths = node.name.split(' > ');
-        nodePaths.unshift('');
+       var nodePaths = node.name.split(' > ');
+       nodePaths.unshift('');
        findNodeAndInsertChild(tree, nodePaths, {name: childNodeName, size: node.size, children: []});
     });
 }
